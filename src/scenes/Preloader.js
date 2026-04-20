@@ -25,6 +25,14 @@ export default class Preloader extends Phaser.Scene {
         this.anims.create({ key: 'volar_azul', frames: this.anims.generateFrameNumbers('fuego_azul'), frameRate: 15, repeat: -1 });
         this.anims.create({ key: 'chispear', frames: this.anims.generateFrameNumbers('chispas'), frameRate: 12, repeat: -1 });
 
+        // src/scenes/Preloader.js -> dentro de create()
+        const gfx = this.make.graphics();
+        // Dibujamos un círculo con un degradado sutil
+        gfx.fillStyle(0xffffff, 1);
+        gfx.fillCircle(8, 8, 8);
+        gfx.generateTexture('humo', 16, 16);
+        gfx.destroy();
+
         // Iniciar el juego
         this.scene.start('Play');
     }
