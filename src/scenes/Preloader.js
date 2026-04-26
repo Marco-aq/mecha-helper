@@ -16,7 +16,7 @@ export default class Preloader extends Phaser.Scene {
         this.load.spritesheet('fuego_azul', 'assets/jetpack_sheet.png', { frameWidth: 40, frameHeight: 50 });
         this.load.spritesheet('chispas', 'assets/chispas_sheet.png', { frameWidth: 78, frameHeight: 60 });
 
-        this.load.audio('bgm', 'assets/musica.mp3'); // O .wav si lo cambiaste
+        this.load.audio('bgm', 'assets/musica.wav'); // O .wav si lo cambiaste
         this.load.audio('sfx_equipar', 'assets/equipar.wav');
         this.load.audio('sfx_exito', 'assets/exito.wav');
         this.load.audio('sfx_alarma', 'assets/alarma.wav');
