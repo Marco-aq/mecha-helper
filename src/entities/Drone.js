@@ -42,6 +42,8 @@ export default class Drone extends Phaser.Physics.Arcade.Sprite {
         this.currentModule = moduleName;
         
         this.body.setVelocityY(-150);
+        
+        this.scene.sound.play('sfx_equipar', { volume: 0.5 });
 
         if (moduleName === 'NONE') {
             this.moduleSprite.setVisible(false);
